@@ -10,16 +10,16 @@ function App() {
   return ( 
     <Router>
       <div>
-        <nav>
-          <a>
+        <ul>
+          <li>
             <Link to="/login">Login</Link>
-          </a>
-          <a>
+          </li>
+          <li>
             <Link to="/friends">Friends List</Link>
-          </a>
-        </nav>
+          </li>
+        </ul>
         <Switch>
-          <PrivateRoute exact path="friends" component={FriendsList} />
+          <PrivateRoute exact path="/friends" component={FriendsList} />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>
