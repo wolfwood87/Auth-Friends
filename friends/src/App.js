@@ -12,10 +12,10 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login" className="nav">Login</Link>
           </li>
           <li>
-            <Link to="/friends">Friends List</Link>
+            <Link to="/friends" className="nav">Friends List</Link>
           </li>
         </ul>
         <Switch>

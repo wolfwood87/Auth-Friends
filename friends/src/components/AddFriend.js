@@ -22,10 +22,10 @@ const AddFriend = () => {
             .catch(err => console.log(err.message))
     }
     return (
-        <form onSubmit={addFriend}>
+        <form onSubmit={addFriend} className="add-friend">
                 <ul>
-                    <li>
-                        <span>Id: </span>
+                    <li className="label-cont">
+                        <span className="add-label">Id: </span>
                         <input
                         type='number'
                         name="id"
@@ -33,8 +33,8 @@ const AddFriend = () => {
                         onChange={handleChange}
                     />
                     </li>
-                    <li>
-                        <span>Name: </span>
+                    <li className="label-cont">
+                        <span className="add-label">Name: </span>
                         <input
                         type='text'
                         name="name"
@@ -42,8 +42,8 @@ const AddFriend = () => {
                         onChange={handleChange}
                     />
                     </li>
-                    <li>
-                        <span>Age: </span>
+                    <li className="label-cont">
+                        <span className="add-label">Age: </span>
                         <input
                         type='number'
                         name="age"
@@ -51,8 +51,8 @@ const AddFriend = () => {
                         onChange={handleChange}
                     />
                     </li>
-                    <li>
-                        <span>Email: </span>
+                    <li className="label-cont">
+                        <span className="add-label">Email: </span>
                         <input
                         type='email'
                         name="email"
@@ -61,7 +61,7 @@ const AddFriend = () => {
                     />
                     </li>
                 </ul>
-                <button>Add Friend</button>
+                <button className="add-button">Add Friend</button>
             </form>
     )
 }

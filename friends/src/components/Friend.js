@@ -3,7 +3,7 @@ import React from 'react';
 const Friend = (props) => {
 
     return (
-        <div>
+        <div className="friend">
             <p>id: {props.item.id}</p>
             <p>name: {props.item.name}</p>
             <p>age: {props.item.age}</p>

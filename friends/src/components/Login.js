@@ -45,23 +45,25 @@ class Login extends React.Component {
     render() {
         return (
             <>
-                <form onSubmit={this.login}>
+                <form onSubmit={this.login} className = "login-form">
                     <input 
                         type="text"
                         name="username"
+                        placeholder="Username"
                         value={this.state.credentials.username}
                         onChange={this.handleChange}
                     />
                     <input
                         type="password"
                         name="password"
+                        placeholder="Password"
                         value={this.state.credentials.password}
                         onChange={this.handleChange}
                     />
-                    <button>Log In</button>
+                    <button className="login-button">Log In</button>
                 </form>
                 {this.state.isLoading && (
-                    <div className="key spinner">
+                    <div className="key-spinner">
                         <Loader type="TailSpin" color="#204963" height="60" width="60" />
                         <p>Loading Data</p>
                     </div>
