@@ -102,7 +102,15 @@ li {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-
+.log-button {
+  position: relative;
+  left: 40%;
+  top: -53px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: .5%;
+  cursor: pointer;
+}
 .key-spinner {
   display: flex;
   flex-direction: column;
