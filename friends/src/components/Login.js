@@ -40,7 +40,14 @@ class Login extends React.Component {
                 })
                 this.props.history.push('/friends')
             })
-            .catch(err => console.log('bk: Login.js: Login: login: catch: err: ', err.message))
+            .catch(err => {
+                console.log('bk: Login.js: Login: login: catch: err: ', err.message)
+                this.setState({
+                    ...this.state,
+                    isLoading: false
+                })
+                alert('Invalid Username/Password')
+            })
          }, 3000);
         
     }
