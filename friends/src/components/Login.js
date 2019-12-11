@@ -25,14 +25,22 @@ class Login extends React.Component {
             ...this.state,
             isLoading: true
         })
+        setTimeout(() => { console.log("Loading");
         axios
             .post('http://localhost:5000/api/login', this.state.credentials)
             .then(res => {
+                
                 console.log('bk: Login.js: Login: login: res: ', res)
                 localStorage.setItem("token", res.data.payload)
+                this.setState({
+                    ...this.state,
+                    isLoading: false
+                })
                 this.props.history.push('/friends')
             })
             .catch(err => console.log('bk: Login.js: Login: login: catch: err: ', err.message))
+         }, 3000);
+        
     }
     render() {
         return (
@@ -52,9 +60,9 @@ class Login extends React.Component {
                     />
                     <button>Log In</button>
                 </form>
-                {this.props.fetchingData && (
+                {this.state.isLoading && (
                     <div className="key spinner">
-                        <Loader type="Puff" color="#204963" height="60" width="60" />
+                        <Loader type="TailSpin" color="#204963" height="60" width="60" />
                         <p>Loading Data</p>
                     </div>
                 )}
